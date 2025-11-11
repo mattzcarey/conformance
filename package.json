@@ -8,13 +8,16 @@
     "test": "jest",
     "lint": "eslint src/ && prettier --check .",
     "lint:fix": "eslint src/ --fix && prettier --write .",
-    "lint:fix_check": "npm run lint:fix && git diff --exit-code --quiet"
+    "lint:fix_check": "npm run lint:fix && git diff --exit-code --quiet",
+    "check": "npm run typecheck && npm run lint",
+    "typecheck": "tsgo --noEmit"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
     "@jest/globals": "^29.7.0",
     "@types/express": "^5.0.3",
     "@types/jest": "^29.5.8",
+    "@typescript/native-preview": "^7.0.0-dev.20251111.1",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^10.1.8",
     "jest": "^29.7.0",
